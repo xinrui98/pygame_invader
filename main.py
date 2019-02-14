@@ -1,6 +1,7 @@
 import sys
 import pygame
 import random
+import images
 
 
 pygame.init()
@@ -58,7 +59,7 @@ def draw_enemies(enemy_list):
     for enemy_pos in enemy_list:
         # pygame.draw.rect(screen, BLUE, (enemy_pos[0], enemy_pos[1], enemy_size, enemy_size))
 
-        enemy = pygame.image.load("predatorfish.png")
+        enemy = pygame.image.load("images/shark_png.png")
         enemy = pygame.transform.scale(enemy, (enemy_size, enemy_size))
         screen.blit(enemy, (enemy_pos[0], enemy_pos[1]))
 
@@ -140,7 +141,7 @@ while not game_over:
         game_over = True
 
     draw_enemies(enemy_list)
-    turtle = pygame.image.load("turlepng.png")
+    turtle = pygame.image.load("images/cute_turtle.png")
     turtle = pygame.transform.scale(turtle, (player_size,player_size))
     screen.blit(turtle,(player_pos[0], player_pos[1]))
 
